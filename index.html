@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Portfolio of Rohith H R — web developer">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <title>Rohith H R — Portfolio</title>
+</head>
+<body>
+    <header>
+        <nav class="nav-wrap">
+            <div class="site-title">Rohith H R</div>
+            <ul class="center-inline" id="nav-menu">
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="projects.html">Projects</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+        </nav>
+    </header>
+
+    <main class="container">
+        <section class="hero">
+            <div class="hero-copy">
+                <h1>Hi, I'm Rohith</h1>
+                <p class="lead">A web developer building clean, responsive sites and creative projects.</p>
+                <div class="hero-ctas">
+                    <a class="btn" href="projects.html">View Projects</a>
+                    <a class="btn btn-outline" href="about.html">About Me</a>
+                </div>
+            </div>
+            <div class="hero-image">
+                <div class="card" id="profile-card" data-tilt>
+                    <div class="card__inner">
+                        <img class="card__img" src="assets/Screenshot 2025-11-26 150524.png" alt="Rohith H R">
+                    </div>
+                    <div class="card__glare"></div>
+                </div>
+            </div>
+        </section>
+
+        <section class="skills">
+            <h2>Skills</h2>
+            <p>HTML • CSS • JavaScript • Responsive Design • Git</p>
+        </section>
+
+        <section class="featured">
+            <h2>Featured Projects</h2>
+            <div class="projects-grid">
+                <article class="project">
+                    <h3>Project One</h3>
+                    <p>Short description of project one. Link and details on the Projects page.</p>
+                    <a class="small-link" href="projects.html">See project</a>
+                </article>
+                <article class="project">
+                    <h3>Project Two</h3>
+                    <p>Short description of project two. Link and details on the Projects page.</p>
+                    <a class="small-link" href="projects.html">See project</a>
+                </article>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <div class="container footer-inner">
+            <p>&copy; <span id="year"></span> Rohith H R — Built with HTML & CSS</p>
+        </div>
+    </footer>
+
+    <script>
+        // set current year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+    <script src="scripts.js"></script>
+</body>
+</html>

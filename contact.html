@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Contact Rohith H R">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Contact — Rohith H R</title>
+</head>
+<body>
+  <header>
+    <nav class="nav-wrap">
+      <div class="site-title">Rohith H R</div>
+      <ul class="center-inline" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Contact</h1>
+    <p>You can reach me via email at <strong>your.email@example.com</strong> (replace with your address) or use the simple form below.</p>
+    <div style="margin:18px 0">
+      <img src="assets/profile.svg" alt="Rohith H R" style="width:96px;border-radius:10px;display:inline-block;vertical-align:middle">
+      <span style="margin-left:12px;color:var(--muted)">Available for freelance and full-time work</span>
+    </div>
+
+    <form class="contact-form" action="#" method="post">
+      <label for="name">Name</label>
+      <input id="name" name="name" type="text" placeholder="Your name">
+
+      <label for="email">Email</label>
+      <input id="email" name="email" type="email" placeholder="your@email.com">
+
+      <label for="message">Message</label>
+      <textarea id="message" name="message" rows="6" placeholder="Write a short message..."></textarea>
+
+      <button class="btn" type="submit">Send Message</button>
+    </form>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year4"></span> Rohith H R</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year4').textContent = new Date().getFullYear();</script>
+  <script src="scripts.js"></script>
+</body>
+</html>

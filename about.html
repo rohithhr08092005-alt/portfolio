@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="About Rohith H R — portfolio">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>About — Rohith H R</title>
+</head>
+<body>
+  <header>
+    <nav class="nav-wrap">
+      <div class="site-title">Rohith H R</div>
+      <ul class="center-inline" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <section style="display:flex;gap:20px;align-items:flex-start">
+      <div style="flex:0 0 160px">
+        <img src="assets/profile.svg" alt="Rohith H R" style="width:160px;border-radius:12px;display:block">
+      </div>
+      <div>
+        <h1>About Me</h1>
+        <p>Hello — I'm Rohith. I enjoy creating accessible, responsive websites and learning new web technologies. I focus on simplicity, usability and clean code.</p>
+      <h2>Experience</h2>
+      <p>Freelance web projects and personal explorations (portfolio items listed on the Projects page).</p>
+      <h2>Contact</h2>
+      <p>If you'd like to work together, <a href="contact.html">send me a message</a>.</p>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year2"></span> Rohith H R</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year2').textContent = new Date().getFullYear();</script>
+  <script src="scripts.js"></script>
+</body>
+</html>

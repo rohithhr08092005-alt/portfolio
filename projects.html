@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="description" content="Projects by Rohith H R">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700;800&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <title>Projects — Rohith H R</title>
+</head>
+<body>
+  <header>
+    <nav class="nav-wrap">
+      <div class="site-title">Rohith H R</div>
+      <ul class="center-inline" id="nav-menu">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation"><span></span></button>
+    </nav>
+  </header>
+
+  <main class="container">
+    <h1>Projects</h1>
+    <div class="projects-grid">
+      <article class="project">
+        <h3>Project One</h3>
+        <p>Details about project one. Tools used: HTML, CSS, JavaScript.</p>
+      </article>
+
+      <article class="project">
+        <h3>Project Two</h3>
+        <p>Details about project two. Tools used: CSS animations, responsive layout.</p>
+      </article>
+
+      <article class="project">
+        <h3>Project Three</h3>
+        <p>Details about project three. Add links or screenshots as needed.</p>
+      </article>
+    </div>
+  </main>
+
+  <footer>
+    <div class="container footer-inner">
+      <p>&copy; <span id="year3"></span> Rohith H R</p>
+    </div>
+  </footer>
+
+  <script>document.getElementById('year3').textContent = new Date().getFullYear();</script>
+  <script src="scripts.js"></script>
+</body>
+</html>

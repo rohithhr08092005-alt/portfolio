@@ -84,6 +84,13 @@ body{
 .contact-form label{font-weight:600}
 .contact-form input,.contact-form textarea{padding:10px;border-radius:6px;border:1px solid #ddd}
 
+/* Contact badges and inline messaging */
+.contact-item{display:flex;align-items:center;gap:8px;margin-bottom:6px}
+.contact-badge{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;background:rgba(255,255,255,0.04);border-radius:6px;color:var(--accent)}
+.contact-badge svg{display:block}
+.field-error{color:#ffb4b4;font-size:0.9rem;margin-top:6px}
+.form-success{color:#b7f5c2;font-size:0.95rem;margin-top:12px}
+
 @media (max-width:640px){
     .hero h1{font-size:28px}
     .container{padding:16px}

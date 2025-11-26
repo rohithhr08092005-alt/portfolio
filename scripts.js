@@ -55,3 +55,61 @@
   card.addEventListener('mouseleave', handleLeave);
   card.addEventListener('mouseenter', updateDims);
 })();
+
+/* Smooth scrolling for internal anchor links + external link safety */
+(function(){
+  // smooth-scroll for anchors that target an element on the page
+  document.addEventListener('click', function(e){
+    const a = e.target.closest('a');
+    if(!a) return;
+    const href = a.getAttribute('href');
+    if(!href) return;
+
+    // internal hash links
+    if(href.startsWith('#')){
+      const target = document.querySelector(href);
+      if(target){
+        e.preventDefault();
+        target.scrollIntoView({behavior: 'smooth', block: 'start'});
+        // update focus for accessibility
+        target.setAttribute('tabindex', '-1');
+        target.focus({preventScroll:true});
+      }
+    }
+  });
+
+  // Ensure external links that open in a new tab use rel for security
+  Array.from(document.querySelectorAll('a[target="_blank"]')).forEach(a=>{
+    if(!a.hasAttribute('rel')) a.setAttribute('rel','noopener noreferrer');
+  });
+})();
+
+/* Contact form basic client-side validation */
+(function(){
+  const form = document.querySelector('.contact-form');
+  if(!form) return;
+
+  function validEmail(email){
+    return /^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email);
+  }
+
+  form.addEventListener('submit', function(e){
+    const name = form.querySelector('#name');
+    const email = form.querySelector('#email');
+    const message = form.querySelector('#message');
+
+    const errors = [];
+    if(!name || !name.value.trim()) errors.push('Please enter your name.');
+    if(!email || !validEmail(email.value.trim())) errors.push('Please enter a valid email address.');
+    if(!message || message.value.trim().length < 10) errors.push('Message must be at least 10 characters.');
+
+    if(errors.length){
+      e.preventDefault();
+      alert(errors.join('\n'));
+      // focus first invalid field
+      if(!name.value.trim()) name.focus();
+      else if(!validEmail(email.value.trim())) email.focus();
+      else message.focus();
+    }
+  });
+})();
